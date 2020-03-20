@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="12dp"
+    android:layout_margin="2dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardElevation="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            tools:text="This is title"
+            android:id="@+id/texViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/titleStyle" />
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/texViewTitle"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageViewThumbnail"
+            android:layout_width="160dp"
+            android:layout_height="160dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/texViewPreamble"
+            style="@style/bodyStyle"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageViewThumbnail"
+            android:layout_below="@+id/texViewTitle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/imageViewThumbnail"
+            tools:text="This is preamble of this story " />
+
+        <TextView
+            style="@style/tinyStyle"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@id/texViewDate"
+            android:layout_marginLeft="16dp"
+            tools:text="Name of the author"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/imageViewThumbnail"
+            android:id="@+id/texViewAuthors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            style="@style/tinyStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            tools:text="12 March 20"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@id/imageViewThumbnail"
+            android:id="@+id/texViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
